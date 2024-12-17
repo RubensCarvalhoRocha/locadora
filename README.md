@@ -26,6 +26,6 @@ Para executar o software, siga os seguintes passos:
 
 ## Autores
 
-Carlos Junior
-Vitor Gallietta
-Rubens Rocha
+Carlos Junior,
+Vitor Gallietta,
+Rubens Rocha,
