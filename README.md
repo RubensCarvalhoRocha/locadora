@@ -28,4 +28,4 @@ Para executar o software, siga os seguintes passos:
 
 Carlos Junior,
 Vitor Gallietta,
-Rubens Rocha,
+Rubens Rocha
