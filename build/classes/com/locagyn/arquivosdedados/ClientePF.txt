@@ -1,0 +1,9 @@
+6;04019875154;teste2;2312432;55;62;985201720;teste2@gmail.com;Rua timbiras;Neropolis;São Jose;Neropolis;GO;75460000
+11;04019875154;teste;2312432;55;62;985201720;teste;Rua timbiras;Neropolis;São Jose;Neropolis;GO;75460000
+12;04019875154;;;55;111;424242;;;;;;AC;242424
+13;04019875154;;;55;111;424242;;;;;;AC;242424
+14;04019875154;;;55;111;424242;;;;;;AC;242424
+15;04019875154;jao;1;55;111;424242;a;;;;;AC;242424
+16;04019875154;jao;1;55;111;424242;a;a;a;a;a;AC;242424
+20;75053950172;rubens;53412;55;62;999999;rocahrubes2@gmail.com;teste;teste;teste;Goiânia;GO;3244444
+21;04019875154;carlos;2312432;55;62;985201720;carlos@gmail.com;Rua timbiras;Neropolis;São Jose;Neropolis;GO;75460000
