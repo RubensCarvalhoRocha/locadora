@@ -6,6 +6,7 @@ package com.locagyn.visao;
 
 import com.locagyn.controle.IMarcaControle;
 import com.locagyn.controle.MarcaControle;
+import com.locagyn.controle.MarcaObserver;
 import com.locagyn.ferramentas.GeradorIdentificador;
 import javax.swing.JOptionPane;
 import com.locagyn.modelos.Marca;
@@ -20,11 +21,11 @@ import com.locagyn.utils.jTableRender;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 
-
-public class TelaDasMarcas extends javax.swing.JFrame {
+public class TelaDasMarcas extends javax.swing.JFrame implements MarcaObserver {
 
     //Atributos 
     IMarcaControle marcaControle = new MarcaControle();
+
     private TableCellRenderer jTableRender;
 
     /**
@@ -32,6 +33,11 @@ public class TelaDasMarcas extends javax.swing.JFrame {
      */
     public TelaDasMarcas() {
         initComponents();
+        marcaControle = new MarcaControle();
+
+        // Registra esta tela como observadora
+        ((MarcaControle) marcaControle).adicionarObserver(this);
+
         jTextFieldIdentificador.setEnabled(false);
         //jTextAreaLogo.setEnabled(false);
         jTextFieldUrl.setEnabled(false);
@@ -357,23 +363,19 @@ public class TelaDasMarcas extends javax.swing.JFrame {
             iconLogo.setImage(iconLogo.getImage().getScaledInstance(jTextFieldLogo.getWidth(), jTextFieldLogo.getHeight(), 1));
             jTextFieldLogo.setIcon(iconLogo);
 
-       } catch (Exception erro) {
-           JOptionPane.showMessageDialog(this, "Selecione uma imagem!");
-       }
+        } catch (Exception erro) {
+            JOptionPane.showMessageDialog(this, "Selecione uma imagem!");
+        }
     }
     private void jButtonIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIncluirActionPerformed
         // TODO add your handling code here:
         try {
-            IMarcaControle incluirMarca = new MarcaControle();
             Marca objeto = new Marca(0, jTextFieldDescricao.getText(), jTextFieldUrl.getText());
             marcaControle.incluir(objeto);
             jTextFieldDescricao.setText("");
-            imprimirDadosNaGrid(incluirMarca.listagem());
-         
-
+            jTextFieldUrl.setText("");
         } catch (Exception erro) {
             JOptionPane.showMessageDialog(this, erro.getMessage());
-
         }
     }//GEN-LAST:event_jButtonIncluirActionPerformed
 
@@ -394,20 +396,17 @@ public class TelaDasMarcas extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         try {
-
-            IMarcaControle incluirMarca = new MarcaControle();
-            Marca objeto = new Marca(Integer.parseInt(jTextFieldIdentificador.getText()), jTextFieldDescricao.getText(), jTextFieldUrl.getText());
-            Marca objetoMarca = new Marca();
-            objetoMarca.setUrl(jTextFieldUrl.getText());
+            Marca objeto = new Marca(
+                    Integer.parseInt(jTextFieldIdentificador.getText()),
+                    jTextFieldDescricao.getText(),
+                    jTextFieldUrl.getText()
+            );
             marcaControle.alterar(objeto);
-
-            imprimirDadosNaGrid(incluirMarca.listagem());
-        
+            jTextFieldDescricao.setText("");
+            jTextFieldUrl.setText("");
         } catch (Exception erro) {
             JOptionPane.showMessageDialog(this, erro.getMessage());
-
         }
-        jTextFieldDescricao.setText("");
 
     }//GEN-LAST:event_jButtonAlterarActionPerformed
 
@@ -558,25 +557,28 @@ public class TelaDasMarcas extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jMenuItemTelaInicialActionPerformed
 
+    /**
+     * Método exigido pela interface MarcaObserver Atualiza a tabela sempre que
+     * o controle notificar uma mudança
+     */
+    @Override
+    public void atualizarListaDeMarcas(ArrayList<Marca> marcas) {
+        imprimirDadosNaGrid(marcas);
+    }
+
+    /**
+     * Atualiza os dados na tabela com base na lista de marcas
+     */
     private void imprimirDadosNaGrid(ArrayList<Marca> listaDeMarcas) {
         try {
             DefaultTableModel model = (DefaultTableModel) jTableMarcas.getModel();
-            //Limpa a tabela
-            model.setNumRows(0);
-            Iterator<Marca> lista = listaDeMarcas.iterator();
-            while (lista.hasNext()) {
-                String[] saida = new String[3];
-                Marca aux = lista.next();
-                saida[0] = aux.getId() + "";
-                saida[1] = aux.getDescricao();
-                saida[2] = aux.getUrl();
-                //Incluir nova linha na Tabela
-                model.addRow(saida);
+            model.setNumRows(0); // Limpa a tabela
+            for (Marca marca : listaDeMarcas) {
+                model.addRow(new Object[]{marca.getId(), marca.getDescricao(), marca.getUrl()});
             }
         } catch (Exception erro) {
             JOptionPane.showMessageDialog(this, erro.getMessage());
         }
-
     }
 
     /**
