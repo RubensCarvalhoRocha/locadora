@@ -4,56 +4,40 @@
  */
 package com.locagyn.modelos;
 
-import java.util.Date;
+public class Motorista extends Pessoa {
 
-public class Motorista {
-
-    private int id;
-    private String nome;
     private String url;
     private int numeroRegistro;
     private String categoriaCNH;
     private String validade;
-    private Telefone telefone;
-    private Endereco endereco;
 
     public Motorista() {
     }
 
-    public Motorista(int id, String nome, String url, int numeroRegistro, String categoriaCNH, String validade, Telefone telefone, Endereco endereco) {
-        this.id = id;
-        this.nome = nome;
+    public Motorista(int id, String nome, Telefone telefone, Endereco endereco,
+            String url, int numeroRegistro, String categoriaCNH, String validade) {
+        super(id, nome, telefone, endereco);
         this.url = url;
         this.numeroRegistro = numeroRegistro;
         this.categoriaCNH = categoriaCNH;
         this.validade = validade;
-        this.telefone = telefone;
-        this.endereco = endereco;
     }
-    
+
     public Motorista(int id, String nome, String url, int numeroRegistro, String categoriaCNH, String validade) {
-        this.id = id;
-        this.nome = nome;
+        super(id, nome);
         this.url = url;
         this.numeroRegistro = numeroRegistro;
         this.categoriaCNH = categoriaCNH;
         this.validade = validade;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+    public Motorista(int id, String nome, String url, int numeroRegistro,
+            String categoriaCNH, String validade, Telefone telefone, Endereco endereco) {
+        super(id, nome, telefone, endereco); 
+        this.url = url;
+        this.numeroRegistro = numeroRegistro;
+        this.categoriaCNH = categoriaCNH;
+        this.validade = validade;
     }
 
     public String getUrl() {
@@ -88,25 +72,14 @@ public class Motorista {
         this.validade = validade;
     }
 
-    public Telefone getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(Telefone telefone) {
-        this.telefone = telefone;
-    }
-
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+    @Override
+    public String getDetalhes() {
+        return "Motorista: " + getNome() + ", CNH: " + categoriaCNH;
     }
 
     @Override
     public String toString() {
-        return id + ";" + nome + ";" + url + ";" + numeroRegistro + ";" + categoriaCNH + ";"
-                + validade + ";" + telefone.toString() + ";" + endereco.toString();
+        return getId() + ";" + getNome() + ";" + url + ";" + numeroRegistro + ";" + categoriaCNH + ";"
+                + validade + ";" + getTelefone().toString() + ";" + getEndereco().toString();
     }
 }

@@ -36,7 +36,7 @@ public class TelaCadastroMotorista extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
          jTextFieldIdentificador.setEnabled(false);
          jTextFieldURL.setEnabled(false);
-        jDateValidade.setDateFormatString("dd/MM/yyyy");
+         jDateValidade.setDateFormatString("dd/MM/yyyy");
         
         
         

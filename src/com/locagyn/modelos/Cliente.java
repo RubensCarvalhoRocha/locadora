@@ -5,53 +5,42 @@
 package com.locagyn.modelos;
 
 import com.locagyn.enumeracao.TipoDeCliente;
-import static com.locagyn.enumeracao.TipoDeCliente.PESSOA_FISICA;
-import static com.locagyn.enumeracao.TipoDeCliente.PESSOA_JURIDICA;
 
 
-public class Cliente {
+public class Cliente  extends Pessoa{
 
-    private int id;
+    
     private String cpf;
     private String cnpj;
-    private String nome;
     private String razaoSocial;
     private String identidade;
     private String email;
-    private Telefone telefone;
-    private Endereco endereco;
     private TipoDeCliente tipoDoCliente;
 
-    public Cliente() {
-    }
+    public Cliente(int i, String vetorString, String vetorString2, String vetorString3, String vetorString4, Telefone telefone, Endereco endereco, TipoDeCliente tipoDoCliente2) {}
 
-    public Cliente(int id, String cpf, String nome, String identidade, String email, Telefone telefone, Endereco endereco, TipoDeCliente tipoDoCliente) {
-        this.id = id;
+    public Cliente(int id, String nome, Telefone telefone, Endereco endereco,
+                   String cpf, String cnpj, String razaoSocial, 
+                   String identidade, String email, TipoDeCliente tipoDoCliente) {
+        super(id, nome, telefone, endereco);
         this.cpf = cpf;
-        this.nome = nome;
+        this.cnpj = cnpj;
+        this.razaoSocial = razaoSocial;
         this.identidade = identidade;
         this.email = email;
-        this.telefone = telefone;
-        this.endereco = endereco;
         this.tipoDoCliente = tipoDoCliente;
     }
 
     public Cliente(int id, String cnpj, String razaoSocial, String email, Telefone telefone, Endereco endereco, TipoDeCliente tipoDoCliente) {
-        this.id = id;
+        super(id, telefone,endereco);
         this.cnpj = cnpj;
         this.razaoSocial = razaoSocial;
         this.email = email;
-        this.telefone = telefone;
-        this.endereco = endereco;
         this.tipoDoCliente = tipoDoCliente;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public Cliente() {
+        
     }
 
     public String getCpf() {
@@ -68,14 +57,6 @@ public class Cliente {
 
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public String getRazaoSocial() {
@@ -102,22 +83,6 @@ public class Cliente {
         this.email = email;
     }
 
-    public Telefone getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(Telefone telefone) {
-        this.telefone = telefone;
-    }
-
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
-
     public TipoDeCliente getTipoDoCliente() {
         return tipoDoCliente;
     }
@@ -129,24 +94,29 @@ public class Cliente {
     public String toString(TipoDeCliente tipoDoCliente) {
 
         if (tipoDoCliente.equals(TipoDeCliente.PESSOA_FISICA)) {
-            return id + ";"
+            return getId() + ";"
                     + cpf + ";"
-                    + nome + ";"
+                    + getNome() + ";"
                     + identidade + ";"
-                    + telefone.toString() + ";"
+                    + getTelefone().toString() + ";"
                     + email + ";"
-                    + endereco.toString();
+                    + getEndereco().toString();
         }
         if (tipoDoCliente.equals(TipoDeCliente.PESSOA_JURIDICA)) {
-            return id + ";"
+            return getId() + ";"
                     + razaoSocial + ";"
                     + cnpj + ";"
-                    + telefone.toString() + ";"
+                    + getTelefone().toString() + ";"
                     + email + ";"
-                    + endereco.toString();
+                    + getEndereco().toString();
         } else {
             return null;
         }
+    }
+
+    @Override
+    public String getDetalhes() {
+        return "Cliente: " + getNome() + ", CPF/CNPJ: " + (cpf != null ? cpf : cnpj);
     }
 
 }
