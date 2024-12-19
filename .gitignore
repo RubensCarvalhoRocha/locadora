@@ -1,2 +1,11 @@
 /nbproject/private/
 /dist/
+
+# Ignorar diretórios de build e arquivos compilados
+/build/
+*.class
+*.form
+
+# Ignorar metadados do NetBeans
+.netbeans_automatic_build
+.netbeans_update_resources
