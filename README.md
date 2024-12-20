@@ -12,24 +12,23 @@ O sistema é voltado para gerenciar as operações de uma locadora de veículos,
 
 ## Conceitos que foram abordados na disclina e aplicados no projeto
 
-Modelagem de diagramas UML
-Classes e Objetos
-Encapsulamento
-Associações
-Herança
-Interfaces 
-Polimorfismo 
-Gerenciamento de	Arquivos 
-Tratamento de Exceções 
-Testes
-Interface gráfica Swing 
-Threads
+- Modelagem de diagramas UML
+- Classes e Objetos
+- Encapsulamento
+- Associações
+- Herança
+- Interfaces
+- Polimorfismo
+- Gerenciamento de Arquivos
+- Tratamento de Exceções
+- Testes
+- Interface gráfica Swing
+- Threads
 
 ## Aplicação de Padrões de Projeto da Gang of Four (GoF)
 
-Observer: Para notificação automática de mudanças entre componentes interdependentes.
-
-Builder: Para construção de objetos complexos de forma modular e escalável.
+- Observer: Para notificação automática de mudanças entre componentes interdependentes.
+- Builder: Para construção de objetos complexos de forma modular e escalável.
 
 ## Como executar
 
@@ -41,6 +40,6 @@ Para executar o software, é necessário ter o Java instalado na máquina.
 
 ## Autores
 
-Carlos Junior,
-Vitor Gallietta,
-Rubens Rocha
+- Carlos Junior,
+- Vitor Gallietta,
+- Rubens Rocha
