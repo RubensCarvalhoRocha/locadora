@@ -8,7 +8,7 @@ O sistema é voltado para gerenciar as operações de uma locadora de veículos,
 - Cadastro de novos veículos
 - Visualização dos veículos cadastrados
 - Aluguel de veículos
-- Devolução de veículos x
+- Devolução de veículos X
 
 ## Conceitos que foram abordados na disclina e aplicados no projeto
 
