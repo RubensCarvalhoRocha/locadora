@@ -1,7 +1,7 @@
 # Locadora de Veículos - Projeto de POO (UFG)
 
 Este software foi desenvolvido como parte da disciplina de Programação Orientada a Objetos na Universidade Federal de Goiás (UFG), com o objetivo de aplicar, na prática, os conceitos e técnicas apreendidos ao longo do semestre.
-O sistema é voltado para gerenciar as operações de uma locadora de veículos, abrangendo desde o cadastro de clientes e veículos até o controle das locações. A implementação foi realizada em Java, utilizando Java Swing para a criação de uma interface gráfica interativa e intuitiva. Para armazenamento e persistência de dados, optou-se por arquivos de texto.
+O sistema é voltado para gerenciar as operações de uma locadora de veículos, abrangendo desde o cadastro de clientes e veículos até o controle das locações. A implementação foi realizada em Java, utilizando Java Swing para a criação de uma interface gráfica. Para armazenamento e persistência de dados, optou-se por arquivos de texto.
 
 ## Principais funcionalidades
 
