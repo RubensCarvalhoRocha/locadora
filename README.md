@@ -22,6 +22,7 @@ O sistema é voltado para gerenciar as operações de uma locadora de veículos,
 - Gerenciamento de Arquivos
 - Tratamento de Exceções
 - Testes
+- Padrões de Projeto
 - Interface gráfica Swing
 - Threads
 
