@@ -100,6 +100,8 @@ public class VeiculoDao implements IVeiculoDao {
                         .setCategoria(objetoCategoria.buscar(Integer.parseInt(vetorString[12]))) // Buscar categoria
                         .build();
 
+                        
+
                 listaDeVeiculos.add(veiculo);
             }
 
