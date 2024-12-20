@@ -11,12 +11,12 @@ import com.locagyn.enumeracao.SituacaoLocacao;
 import com.locagyn.modelos.Devolucao;
 import com.locagyn.modelos.Locacao;
 import com.locagyn.controle.DevolucaoControle;
+import java.awt.Image;
 import java.io.File;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-
 
 public class TelaDevolucao extends javax.swing.JFrame {
 
@@ -39,7 +39,6 @@ public class TelaDevolucao extends javax.swing.JFrame {
         jTextFieldDiasAMenos.setEnabled(false);
         jTextFieldTotal.setEnabled(false);
         jTextFieldTotal.setEditable(false);
-        
 
         try {
             ArrayList<Locacao> listaLocacao = locacaoControle.listagem();
@@ -115,7 +114,6 @@ public class TelaDevolucao extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(176, 198, 238));
 
         jLabel14.setFont(new java.awt.Font("Times New Roman", 1, 22)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Km:");
 
         jTextFieldKm.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -126,7 +124,6 @@ public class TelaDevolucao extends javax.swing.JFrame {
 
         jCheckBoxLocacaoAMaisTempo.setBackground(new java.awt.Color(176, 198, 238));
         jCheckBoxLocacaoAMaisTempo.setFont(new java.awt.Font("Times New Roman", 1, 22)); // NOI18N
-        jCheckBoxLocacaoAMaisTempo.setForeground(new java.awt.Color(0, 0, 0));
         jCheckBoxLocacaoAMaisTempo.setText("Veículo locado a mais tempo");
         jCheckBoxLocacaoAMaisTempo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,7 +133,6 @@ public class TelaDevolucao extends javax.swing.JFrame {
 
         jCheckBoxLocacaoAMenosTempo.setBackground(new java.awt.Color(176, 198, 238));
         jCheckBoxLocacaoAMenosTempo.setFont(new java.awt.Font("Times New Roman", 1, 22)); // NOI18N
-        jCheckBoxLocacaoAMenosTempo.setForeground(new java.awt.Color(0, 0, 0));
         jCheckBoxLocacaoAMenosTempo.setText("Veículo locado a menos tempo");
         jCheckBoxLocacaoAMenosTempo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,7 +141,6 @@ public class TelaDevolucao extends javax.swing.JFrame {
         });
 
         jLabel15.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Dias a mais:");
 
         jTextFieldValorDano.addActionListener(new java.awt.event.ActionListener() {
@@ -160,7 +155,6 @@ public class TelaDevolucao extends javax.swing.JFrame {
         });
 
         jLabel16.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("Dias a menos:");
 
         jTextFieldDiasAMais.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -171,7 +165,6 @@ public class TelaDevolucao extends javax.swing.JFrame {
 
         jCheckBoxDanoSofrido.setBackground(new java.awt.Color(176, 198, 238));
         jCheckBoxDanoSofrido.setFont(new java.awt.Font("Times New Roman", 1, 22)); // NOI18N
-        jCheckBoxDanoSofrido.setForeground(new java.awt.Color(0, 0, 0));
         jCheckBoxDanoSofrido.setText("Veículo sofreu algum dano");
         jCheckBoxDanoSofrido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,7 +174,6 @@ public class TelaDevolucao extends javax.swing.JFrame {
 
         jCheckBoxLimpeza.setBackground(new java.awt.Color(176, 198, 238));
         jCheckBoxLimpeza.setFont(new java.awt.Font("Times New Roman", 1, 22)); // NOI18N
-        jCheckBoxLimpeza.setForeground(new java.awt.Color(0, 0, 0));
         jCheckBoxLimpeza.setText("Veículo sujo");
         jCheckBoxLimpeza.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,7 +183,6 @@ public class TelaDevolucao extends javax.swing.JFrame {
 
         jCheckBoxTanqueCheio.setBackground(new java.awt.Color(176, 198, 238));
         jCheckBoxTanqueCheio.setFont(new java.awt.Font("Times New Roman", 1, 22)); // NOI18N
-        jCheckBoxTanqueCheio.setForeground(new java.awt.Color(0, 0, 0));
         jCheckBoxTanqueCheio.setText("Veículo com tanque cheio");
         jCheckBoxTanqueCheio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -252,7 +243,6 @@ public class TelaDevolucao extends javax.swing.JFrame {
         });
 
         jLabel17.setFont(new java.awt.Font("Times New Roman", 1, 22)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setText("Locação:");
 
         jComboBoxLocacao.addActionListener(new java.awt.event.ActionListener() {
@@ -278,11 +268,9 @@ public class TelaDevolucao extends javax.swing.JFrame {
         });
 
         jLabel18.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setText("Valor:");
 
         jLabel19.setFont(new java.awt.Font("Times New Roman", 1, 22)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setText("Total:");
 
         jTextFieldValorSujo.addActionListener(new java.awt.event.ActionListener() {
@@ -297,7 +285,6 @@ public class TelaDevolucao extends javax.swing.JFrame {
         });
 
         jLabel21.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
         jLabel21.setText("Valor:");
 
         jTextFieldTanqueCheio.addActionListener(new java.awt.event.ActionListener() {
@@ -312,11 +299,9 @@ public class TelaDevolucao extends javax.swing.JFrame {
         });
 
         jLabel22.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(0, 0, 0));
         jLabel22.setText("Valor:");
 
         jLabel23.setFont(new java.awt.Font("Times New Roman", 1, 22)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(0, 0, 0));
         jLabel23.setText("Hora:");
 
         jTextFieldHora.addActionListener(new java.awt.event.ActionListener() {
@@ -392,11 +377,10 @@ public class TelaDevolucao extends javax.swing.JFrame {
                             .addComponent(jButtonDevolver)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jButtonAnexo1)
-                                        .addComponent(jButtonAnexo2, javax.swing.GroupLayout.Alignment.TRAILING))
+                                    .addComponent(jButtonAnexo2)
                                     .addComponent(jButtonAnexo3, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addComponent(jButtonAnexo4, javax.swing.GroupLayout.Alignment.TRAILING)))))
+                                .addComponent(jButtonAnexo4, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(jButtonAnexo1))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -811,17 +795,15 @@ public class TelaDevolucao extends javax.swing.JFrame {
                 valorTotal = valorTotal - multas;
             }
             int idLocacao = 0;
-            Devolucao objetoDevolucao = new Devolucao(0,locacaoControle.buscar(idLocacao), anexo1, anexo2, anexo3, anexo4, valorParam, valorPorDia, valorAPagar);
+            Devolucao objetoDevolucao = new Devolucao(0, locacaoControle.buscar(idLocacao), anexo1, anexo2, anexo3, anexo4, valorParam, valorPorDia, valorAPagar);
             ArrayList<Locacao> listaDevolucao = locacaoControle.listagem();
-                for (int i = 0; i < listaDevolucao.size(); i++) {
-                    if (jComboBoxLocacao.getSelectedItem().equals(listaDevolucao.get(i).getDataInicio())) {
-                        objetoDevolucao.setLocacao(listaDevolucao.get(i));
-                    }
+            for (int i = 0; i < listaDevolucao.size(); i++) {
+                if (jComboBoxLocacao.getSelectedItem().equals(listaDevolucao.get(i).getDataInicio())) {
+                    objetoDevolucao.setLocacao(listaDevolucao.get(i));
                 }
+            }
             devolucaoControle.incluir(objetoDevolucao);
-            
-            
-            
+
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(this, "Falha ao carregar dados!");
         }
@@ -909,92 +891,127 @@ public class TelaDevolucao extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBoxLocacaoActionPerformed
 
     private void jButtonAnexo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnexo1ActionPerformed
-        try {
-            JFileChooser fc = new JFileChooser();
-            File logo = new File("./src/com/locadora/devolucao");
-            fc.setCurrentDirectory(logo);
-            fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
-            fc.showOpenDialog(this);
-            File arquivo = fc.getSelectedFile();
-            String nomeDoArquivo = arquivo.getPath();
-            String nome = arquivo.getName();
-            String url = logo.getPath();
-            url += "/" + nome;
-            anexo1 = url;
-            ImageIcon iconLogo = new ImageIcon(nomeDoArquivo);
-            iconLogo.setImage(iconLogo.getImage().getScaledInstance(jTextFieldAnexo1.getWidth(), jTextFieldAnexo1.getHeight(), 1));
-            jTextFieldAnexo1.setIcon(iconLogo);
-
-        } catch (Exception erro) {
-            JOptionPane.showMessageDialog(this, "Selecione uma imagem!");
-        }
+        new Thread(() -> {
+            try {
+                JFileChooser fc = new JFileChooser();
+                File logo = new File("./src/com/locadora/devolucao");
+                fc.setCurrentDirectory(logo);
+                fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
+                fc.showOpenDialog(this);
+                File arquivo = fc.getSelectedFile();
+                if (arquivo != null) {
+                    String nomeDoArquivo = arquivo.getPath();
+                    String nome = arquivo.getName();
+                    String url = logo.getPath();
+                    url += "/" + nome;
+                    anexo1 = url;
+                    ImageIcon iconLogo = new ImageIcon(nomeDoArquivo);
+                    iconLogo.setImage(iconLogo.getImage().getScaledInstance(jTextFieldAnexo1.getWidth(), jTextFieldAnexo1.getHeight(), Image.SCALE_SMOOTH));
+                    jTextFieldAnexo1.setIcon(iconLogo);
+                    // Imprime as threads em execução no console
+                    System.out.println("Thread atual: " + Thread.currentThread().getName());
+                    System.out.println("Lista de threads em execução:");
+                    Thread.getAllStackTraces().keySet().forEach(thread
+                            -> System.out.println(" - " + thread.getName() + " (estado: " + thread.getState() + ")")
+                    );
+                }
+            } catch (Exception erro) {
+                JOptionPane.showMessageDialog(this, "Selecione uma imagem!");
+            }
+        }).start();
     }//GEN-LAST:event_jButtonAnexo1ActionPerformed
 
     private void jButtonAnexo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnexo2ActionPerformed
-        try {
-            JFileChooser fc = new JFileChooser();
-            File logo = new File("./src/com/locadora/devolucao");
-            fc.setCurrentDirectory(logo);
-            fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
-            fc.showOpenDialog(this);
-            File arquivo = fc.getSelectedFile();
-            String nomeDoArquivo = arquivo.getPath();
-            String nome = arquivo.getName();
-            String url = logo.getPath();
-            url += "/" + nome;
-            anexo2 = url;
-            ImageIcon iconLogo = new ImageIcon(nomeDoArquivo);
-            iconLogo.setImage(iconLogo.getImage().getScaledInstance(jTextFieldAnexo2.getWidth(), jTextFieldAnexo2.getHeight(), 1));
-            jTextFieldAnexo2.setIcon(iconLogo);
-
-        } catch (Exception erro) {
-            JOptionPane.showMessageDialog(this, "Selecione uma imagem!");
-        }
+        new Thread(() -> {
+            try {
+                JFileChooser fc = new JFileChooser();
+                File logo = new File("./src/com/locadora/devolucao");
+                fc.setCurrentDirectory(logo);
+                fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
+                fc.showOpenDialog(this);
+                File arquivo = fc.getSelectedFile();
+                if (arquivo != null) {
+                    String nomeDoArquivo = arquivo.getPath();
+                    String nome = arquivo.getName();
+                    String url = logo.getPath();
+                    url += "/" + nome;
+                    anexo2 = url;
+                    ImageIcon iconLogo = new ImageIcon(nomeDoArquivo);
+                    iconLogo.setImage(iconLogo.getImage().getScaledInstance(jTextFieldAnexo2.getWidth(), jTextFieldAnexo2.getHeight(), Image.SCALE_SMOOTH));
+                    jTextFieldAnexo2.setIcon(iconLogo);
+                    // Imprime as threads em execução no console
+                    System.out.println("Thread atual: " + Thread.currentThread().getName());
+                    System.out.println("Lista de threads em execução:");
+                    Thread.getAllStackTraces().keySet().forEach(thread
+                            -> System.out.println(" - " + thread.getName() + " (estado: " + thread.getState() + ")")
+                    );
+                }
+            } catch (Exception erro) {
+                JOptionPane.showMessageDialog(this, "Selecione uma imagem!");
+            }
+        }).start();
     }//GEN-LAST:event_jButtonAnexo2ActionPerformed
 
     private void jButtonAnexo3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnexo3ActionPerformed
-        try {
-            JFileChooser fc = new JFileChooser();
-            File logo = new File("./src/com/locadora/devolucao");
-            fc.setCurrentDirectory(logo);
-            fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
-            fc.showOpenDialog(this);
-            File arquivo = fc.getSelectedFile();
-            String nomeDoArquivo = arquivo.getPath();
-            String nome = arquivo.getName();
-            String url = logo.getPath();
-            url += "/" + nome;
-            anexo3 = url;
-            ImageIcon iconLogo = new ImageIcon(nomeDoArquivo);
-            iconLogo.setImage(iconLogo.getImage().getScaledInstance(jTextFieldAnexo3.getWidth(), jTextFieldAnexo3.getHeight(), 1));
-            jTextFieldAnexo3.setIcon(iconLogo);
-
-        } catch (Exception erro) {
-            JOptionPane.showMessageDialog(this, "Selecione uma imagem!");
-        }
-
-
+        new Thread(() -> {
+            try {
+                JFileChooser fc = new JFileChooser();
+                File logo = new File("./src/com/locadora/devolucao");
+                fc.setCurrentDirectory(logo);
+                fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
+                fc.showOpenDialog(this);
+                File arquivo = fc.getSelectedFile();
+                if (arquivo != null) {
+                    String nomeDoArquivo = arquivo.getPath();
+                    String nome = arquivo.getName();
+                    String url = logo.getPath();
+                    url += "/" + nome;
+                    anexo3 = url;
+                    ImageIcon iconLogo = new ImageIcon(nomeDoArquivo);
+                    iconLogo.setImage(iconLogo.getImage().getScaledInstance(jTextFieldAnexo3.getWidth(), jTextFieldAnexo3.getHeight(), Image.SCALE_SMOOTH));
+                    jTextFieldAnexo3.setIcon(iconLogo);
+                    // Imprime as threads em execução no console
+                    System.out.println("Thread atual: " + Thread.currentThread().getName());
+                    System.out.println("Lista de threads em execução:");
+                    Thread.getAllStackTraces().keySet().forEach(thread
+                            -> System.out.println(" - " + thread.getName() + " (estado: " + thread.getState() + ")")
+                    );
+                }
+            } catch (Exception erro) {
+                JOptionPane.showMessageDialog(this, "Selecione uma imagem!");
+            }
+        }).start();
     }//GEN-LAST:event_jButtonAnexo3ActionPerformed
 
     private void jButtonAnexo4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnexo4ActionPerformed
-        try {
-            JFileChooser fc = new JFileChooser();
-            File logo = new File("./src/com/locadora/devolucao");
-            fc.setCurrentDirectory(logo);
-            fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
-            fc.showOpenDialog(this);
-            File arquivo = fc.getSelectedFile();
-            String nomeDoArquivo = arquivo.getPath();
-            String nome = arquivo.getName();
-            String url = logo.getPath();
-            url += "/" + nome;
-            anexo4 = url;
-            ImageIcon iconLogo = new ImageIcon(nomeDoArquivo);
-            iconLogo.setImage(iconLogo.getImage().getScaledInstance(jTextFieldAnexo4.getWidth(), jTextFieldAnexo4.getHeight(), 1));
-            jTextFieldAnexo4.setIcon(iconLogo);
-        } catch (Exception erro) {
-            JOptionPane.showMessageDialog(this, "Selecione uma imagem!");
-        }
+        new Thread(() -> {
+            try {
+                JFileChooser fc = new JFileChooser();
+                File logo = new File("./src/com/locadora/devolucao");
+                fc.setCurrentDirectory(logo);
+                fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
+                fc.showOpenDialog(this);
+                File arquivo = fc.getSelectedFile();
+                if (arquivo != null) {
+                    String nomeDoArquivo = arquivo.getPath();
+                    String nome = arquivo.getName();
+                    String url = logo.getPath();
+                    url += "/" + nome;
+                    anexo4 = url;
+                    ImageIcon iconLogo = new ImageIcon(nomeDoArquivo);
+                    iconLogo.setImage(iconLogo.getImage().getScaledInstance(jTextFieldAnexo4.getWidth(), jTextFieldAnexo4.getHeight(), Image.SCALE_SMOOTH));
+                    jTextFieldAnexo4.setIcon(iconLogo);
+                    // Imprime as threads em execução no console
+                    System.out.println("Thread atual: " + Thread.currentThread().getName());
+                    System.out.println("Lista de threads em execução:");
+                    Thread.getAllStackTraces().keySet().forEach(thread
+                            -> System.out.println(" - " + thread.getName() + " (estado: " + thread.getState() + ")")
+                    );
+                }
+            } catch (Exception erro) {
+                JOptionPane.showMessageDialog(this, "Selecione uma imagem!");
+            }
+        }).start();
     }//GEN-LAST:event_jButtonAnexo4ActionPerformed
 
     /**
