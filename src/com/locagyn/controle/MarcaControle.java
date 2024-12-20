@@ -16,7 +16,7 @@ import java.util.List;
 public class MarcaControle implements IMarcaControle {
 
     private IMarcaDao marcaPersistencia;
-    private List<MarcaObserver> observers = new ArrayList<>(); // Lista de observadores
+    private List<IMarcaObserver> observers = new ArrayList<>(); // Lista de observadores
 
     public MarcaControle() {
         this.marcaPersistencia = new MarcaDao();
@@ -27,7 +27,7 @@ public class MarcaControle implements IMarcaControle {
      *
      * @param observer Observador a ser adicionado.
      */
-    public void adicionarObserver(MarcaObserver observer) {
+    public void adicionarObserver(IMarcaObserver observer) {
         if (!observers.contains(observer)) {
             observers.add(observer);
         }
@@ -38,7 +38,7 @@ public class MarcaControle implements IMarcaControle {
      *
      * @param observer Observador a ser removido.
      */
-    public void removerObserver(MarcaObserver observer) {
+    public void removerObserver(IMarcaObserver observer) {
         observers.remove(observer);
     }
 
@@ -50,7 +50,7 @@ public class MarcaControle implements IMarcaControle {
      */
     private void notificarObservers() throws Exception {
         ArrayList<Marca> listaDeMarcas = listagem();
-        for (MarcaObserver observer : observers) {
+        for (IMarcaObserver observer : observers) {
             observer.atualizarListaDeMarcas(listaDeMarcas);
         }
     }

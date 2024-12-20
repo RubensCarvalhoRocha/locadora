@@ -6,7 +6,6 @@ package com.locagyn.visao;
 
 import com.locagyn.controle.IMarcaControle;
 import com.locagyn.controle.MarcaControle;
-import com.locagyn.controle.MarcaObserver;
 import com.locagyn.ferramentas.GeradorIdentificador;
 import javax.swing.JOptionPane;
 import com.locagyn.modelos.Marca;
@@ -20,8 +19,9 @@ import com.locagyn.utils.jTableRender;
 
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
+import com.locagyn.controle.IMarcaObserver;
 
-public class TelaDasMarcas extends javax.swing.JFrame implements MarcaObserver {
+public class TelaDasMarcas extends javax.swing.JFrame implements IMarcaObserver {
 
     //Atributos 
     IMarcaControle marcaControle = new MarcaControle();
@@ -558,8 +558,8 @@ public class TelaDasMarcas extends javax.swing.JFrame implements MarcaObserver {
     }//GEN-LAST:event_jMenuItemTelaInicialActionPerformed
 
     /**
-     * Método exigido pela interface MarcaObserver Atualiza a tabela sempre que
-     * o controle notificar uma mudança
+     * Método exigido pela interface IMarcaObserver Atualiza a tabela sempre que
+ o controle notificar uma mudança
      */
     @Override
     public void atualizarListaDeMarcas(ArrayList<Marca> marcas) {
