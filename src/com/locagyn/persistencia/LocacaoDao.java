@@ -4,9 +4,9 @@
  */
 package com.locagyn.persistencia;
 
-import com.locagyn.enumeracao.TipoDeCliente;
 import com.locagyn.ferramentas.GeradorIdentificador;
 import com.locagyn.modelos.Locacao;
+import com.locagyn.modelos.LocacaoComMotoristaFactory;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -59,26 +59,12 @@ public class LocacaoDao implements ILocacaoDao{
             FileReader fr = new FileReader(nomeDoArquivoNoDisco);
             BufferedReader br = new BufferedReader(fr);
             String linha;
+            
+            LocacaoComMotoristaFactory locacaoFactory = new LocacaoComMotoristaFactory();
+
             while ((linha = br.readLine()) != null) {
-                IVeiculoDao objetoVeiculo = new VeiculoDao();
-                IMotoristaDao objetoMotorista = new MotoristaDao();
-                IAcessoriosDao objetoAcessorio = new AcessoriosDao();
-                Locacao objetoLocacao = new Locacao();
-                String vetorString[] = linha.split(";");
-                objetoLocacao.setId(Integer.parseInt(vetorString[0]));
-                int idMotorista = Integer.parseInt(vetorString[2]);
-                objetoLocacao.setMotorista(objetoMotorista.buscar(idMotorista));
-                int idVeiculo = Integer.parseInt(vetorString[3]);
-                objetoLocacao.setVeiculo(objetoVeiculo.buscar(idVeiculo));
-                int idAcessorios = Integer.parseInt(vetorString[4]);
-                objetoLocacao.setAcessorio(objetoAcessorio.buscar(idAcessorios));
-                objetoLocacao.setDataInicio(vetorString[5]);
-                objetoLocacao.setDataFim(vetorString[6]);
-                objetoLocacao.setValorDaLocação(Float.parseFloat(vetorString[7]));
-                objetoLocacao.setSituacao(vetorString[8]);
-                objetoLocacao.setDiasLocados(Long.parseLong(vetorString[9]));
                 
-                
+                Locacao objetoLocacao = locacaoFactory.criarLocacao(linha);
                 listaDeLocacao.add(objetoLocacao);
 
             }
