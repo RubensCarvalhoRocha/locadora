@@ -43,5 +43,4 @@ Para executar o software, é necessário ter o Java instalado na máquina.
 ## Autores
 
 - Carlos Junior,
-- Vitor Gallietta,
 - Rubens Rocha
