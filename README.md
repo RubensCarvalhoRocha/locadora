@@ -34,11 +34,13 @@ O sistema é voltado para gerenciar as operações de uma locadora de veículos,
 
 ## Como executar
 
-Para executar o software, é necessário ter o Java instalado na máquina.
+Para executar o software, é necessário ter o Java 17 instalado na máquina.
 
 1. Clone o repositório para a sua máquina
 2. Abra o projeto em uma IDE Java, como o Eclipse ou NetBeans
 3. Compile e execute a classe Main.java
+4. Caso a ide não reconheca a biblioteca JCalender, basta clicar com o botão direito no projeto, clicar em resolve problems e apontar para o arquivo JCalender.jar que está dentro do pacote das telas.
+
 
 ## Autores
 
