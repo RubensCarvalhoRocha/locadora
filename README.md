@@ -28,6 +28,7 @@ Threads
 ## Aplicação de Padrões de Projeto da Gang of Four (GoF)
 
 Observer: Para notificação automática de mudanças entre componentes interdependentes.
+
 Builder: Para construção de objetos complexos de forma modular e escalável.
 
 ## Como executar
