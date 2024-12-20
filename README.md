@@ -30,7 +30,7 @@ O sistema é voltado para gerenciar as operações de uma locadora de veículos,
 
 - Observer: Para notificação automática de mudanças entre componentes interdependentes.
 - Builder: Para construção de objetos complexos de forma modular e escalável.
-- Factory
+- FactoryFactory Method: Para quando a criação de um objeto pode ser delegada a uma subclasse ou uma classe diferente
 
 ## Como executar
 
